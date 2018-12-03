@@ -1,0 +1,247 @@
+/*Basis*/
+
+* {
+    font-family: arial, sans-serif;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    color: black;
+}
+
+button {
+    color: rgb(85, 86, 90);
+    background-color: rgb(251, 221, 15);
+    box-shadow: rgb(210, 184, 43) 0px 2px 0px 0px, rgba(0, 0, 0, 0.2) 0px 3px 2px 0px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1em;
+    text-transform: uppercase;
+    padding: 12px 20px;
+}
+
+button:hover {
+    background-color: rgb(255, 242, 151);
+}
+
+button:active {
+    box-shadow: 0px 0px 0px 0px;
+    border: none;
+}
+
+
+/*Header*/
+
+h1 {
+    color: white;
+}
+
+.titel {
+    display: flex;
+    width: 80vw;
+    margin: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+}
+
+header {
+    padding-top: 15px;
+    background-color: #07193c;
+    height: 127px;
+}
+
+header nav {
+    display: flex;
+    width: 80vw;
+    margin: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+
+header a {
+    color: white;
+    margin-right: 5px;
+    padding: 10px 15px 10px 10px;
+    background-color: #32415e;
+}
+
+.nav-1 {
+    position: relative;
+    top: 10px;
+}
+
+header a:hover {
+    border-top-color: #ffcf04;
+    border-top-style: solid;
+    background-color: #4e648e;
+}
+
+nav input {
+    padding: 7px 9px 7px 9px;
+    font-size: 1.2em;
+    background-color: #32415e;
+    border: none;
+    color: white;
+}
+
+nav input::placeholder {
+    color: #6379a3;
+}
+
+
+/*uitgelicht*/
+
+#voor-jou {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.93), rgba(255, 0, 0, 0)), url(paranoia.png);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-size: 100vw;
+    width: 100vw;
+    transition: background 0.3s;
+}
+
+#jou-content {
+    color: white;
+    width: 80vw;
+    margin: auto;
+    margin-right: auto;
+    padding: 60px 0px 20px 0px;
+}
+
+#voor-jou:hover {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(255, 0, 0, 0)), url(paranoia.png);
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-size: 105vw;
+}
+
+#populair {
+    color: white;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.93), rgba(255, 0, 0, 0)), url(klumper.png);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-size: 100vw;
+    transition: background 0.3s;
+}
+
+#populair-content {
+    color: white;
+    width: 80vw;
+    margin: auto;
+    margin-right: auto;
+    padding: 60px 0px 20px 0px;
+}
+
+#populair:hover {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(255, 0, 0, 0)), url(klumper.png);
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-size: 105vw;
+}
+
+
+/*alle-verhalen*/
+
+#verhalen-top {
+    width: 80vw;
+    margin: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+
+.filter-knop {
+    background-image: url(pijl-rechts.png);
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: 90px;
+    background-color: #e3e3e3;
+    box-shadow: rgb(172, 172, 172) 0px 2px 0px 0px, rgba(0, 0, 0, 0.2) 0px 3px 2px 0px;
+    padding: 12px 40px 12px 20px;
+}
+
+#filter-knop:hover {
+    background-color: rgb(237, 237, 237);
+}
+
+.filter-actief {
+    background-image: url(pijl-onder.png);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 95%;
+    background-color: #ffffff;
+    border: solid 3px;
+    border-color: #30b5c7;
+    box-shadow: rgb(172, 172, 172) 0px 0px 0px 0px, rgba(0, 0, 0, 0.2) 0px 0px 0px 0px;
+    padding: 12px 57vw 12px 20px;
+}
+
+#filters form {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+#filters fieldset {
+    background-color: #e8e8e8;
+    padding: 0px 4vw;
+    border: none;
+    margin: 10px 7vw;
+    font-size: 1.2em;
+}
+
+#verhalen {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 80vw;
+    margin: auto;
+    margin-right: auto;
+    height: 40em;
+    overflow: auto;
+}
+
+#verhalen article {
+    display: ;
+    background: url(klumper.png);
+    background-size: 39.5em;
+    background-repeat: no-repeat;
+    background-clip: inset(10px 10px 10px 10px);
+    width: 400px;
+    margin: 20px 6px;
+    border-radius: 10px;
+    padding-top: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /*schaduw afkomstig van https://www.w3schools.com/css/css3_shadows.asp geraadpleegd op 2/12/2018*/
+    transition: box-shadow 0.3s;
+    height: 136px;
+}
+
+#verhalen img {
+    width: 15px;
+    height: 15px;
+}
+
+#verhalen article:hover {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    background-size: 40.5em;
+    transition: background-size 0.3s;
+}
+
+#verhalen div {
+    background-color: white;
+    padding: 5px 10px 1px 10px;
+    border-radius: 0px 0px 10px 10px;
+}
