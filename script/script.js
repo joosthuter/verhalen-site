@@ -40,3 +40,9 @@ function bigButton() {
 
 filterBtn.addEventListener("click", showFilters);
 filterBtn.addEventListener("click", bigButton);
+
+var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+
+if (w < 950) {
+    document.getElementById("logo").src = "images/logo-mobile.svg"
+}

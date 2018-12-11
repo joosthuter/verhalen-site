@@ -39,8 +39,18 @@ button:active {
     border: none;
 }
 
+@font-face {
+    font-family: aspect;
+    src: url(aspect.otf)
+}
+
 
 /*Header*/
+
+h1,
+h2 {
+    font-family: aspect;
+}
 
 h1 {
     color: white;
@@ -70,38 +80,69 @@ header nav {
 
 header a {
     color: white;
+    text-transform: capitalize;
     margin-right: 5px;
     padding: 10px 15px 10px 10px;
     background-color: #32415e;
+    border-top-color: rgb(255, 207, 4, 0);
+    transition: background-color 1s;
+    transition: border-top-color 1s;
+}
+
+.visiting {
+    border-top-color: rgb(255, 207, 4);
+    border-top-style: solid;
+}
+
+nav img {
+    display: none;
 }
 
 .nav-1 {
     position: relative;
     top: 10px;
+    font-weight: bold;
+}
+
+.nav-2 a {
+    background-color: #1a2b4b;
 }
 
 header a:hover {
-    border-top-color: #ffcf04;
+    border-top-color: rgb(255, 207, 4);
     border-top-style: solid;
     background-color: #4e648e;
+    border-width: 0.1em;
 }
 
 nav input {
     padding: 7px 9px 7px 9px;
     font-size: 1.2em;
-    background-color: #32415e;
+    background-color: #1a2b4b;
     border: none;
     color: white;
 }
 
+nav input:hover {
+    background-color: #243d6d;
+}
+
+nav input:hover::placeholder {
+    color: white;
+}
+
 nav input::placeholder {
-    color: #6379a3;
+    color: #5d6b86;
+}
+
+.nav-mobile {
+    display: none;
 }
 
 
 /*uitgelicht*/
 
-#voor-jou {
+.voor-jou {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.93), rgba(255, 0, 0, 0)), url(paranoia.png);
     background-color: black;
     background-repeat: no-repeat;
@@ -111,7 +152,7 @@ nav input::placeholder {
     transition: background 0.3s;
 }
 
-#jou-content {
+.voor-jou div {
     color: white;
     width: 80vw;
     margin: auto;
@@ -119,14 +160,14 @@ nav input::placeholder {
     padding: 60px 0px 20px 0px;
 }
 
-#voor-jou:hover {
+.voor-jou:hover {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(255, 0, 0, 0)), url(paranoia.png);
     background-repeat: no-repeat;
     background-clip: border-box;
     background-size: 105vw;
 }
 
-#populair {
+.populair {
     color: white;
     background: linear-gradient(to right, rgba(0, 0, 0, 0.93), rgba(255, 0, 0, 0)), url(klumper.png);
     background-color: black;
@@ -136,7 +177,7 @@ nav input::placeholder {
     transition: background 0.3s;
 }
 
-#populair-content {
+.populair div {
     color: white;
     width: 80vw;
     margin: auto;
@@ -144,7 +185,7 @@ nav input::placeholder {
     padding: 60px 0px 20px 0px;
 }
 
-#populair:hover {
+.populair:hover {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(255, 0, 0, 0)), url(klumper.png);
     background-repeat: no-repeat;
     background-clip: border-box;
@@ -154,7 +195,7 @@ nav input::placeholder {
 
 /*alle-verhalen*/
 
-#verhalen-top {
+.verhalen-top {
     width: 80vw;
     margin: auto;
     margin-right: auto;
@@ -202,7 +243,7 @@ nav input::placeholder {
     font-size: 1.2em;
 }
 
-#verhalen {
+.verhalen {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -210,11 +251,9 @@ nav input::placeholder {
     margin: auto;
     margin-right: auto;
     height: 40em;
-    overflow: auto;
 }
 
-#verhalen article {
-    display: ;
+.verhalen article {
     background: url(klumper.png);
     background-size: 39.5em;
     background-repeat: no-repeat;
@@ -229,19 +268,113 @@ nav input::placeholder {
     height: 136px;
 }
 
-#verhalen img {
+.verhalen img {
     width: 15px;
     height: 15px;
 }
 
-#verhalen article:hover {
+.verhalen article:hover {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
     background-size: 40.5em;
     transition: background-size 0.3s;
 }
 
-#verhalen div {
+.verhalen div {
     background-color: white;
     padding: 5px 10px 1px 10px;
     border-radius: 0px 0px 10px 10px;
+}
+
+@media only screen and (max-width: 900px) {
+    nav span {
+        display: none;
+    }
+    nav img {
+        display: block;
+        height: 1.8em;
+    }
+    nav input {
+        display: none;
+    }
+    header nav {
+        display: flex;
+        justify-content: center;
+        background-color: #1a2b4b;
+        width: 100%;
+        padding: 0.5em 0;
+    }
+    .nav-1 a {
+        position: relative;
+        top: -10px;
+    }
+    .nav-2 a {
+        background: none;
+    }
+    .titel {
+        display: block;
+        text-align: center;
+        padding-bottom: 0;
+    }
+    nav div {
+        display: flex;
+    }
+    nav div a {
+        display: flex;
+        flex-direction: column;
+        background: none;
+        margin: 0 6vw;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 5vw;
+        padding-left: 1em;
+        border-bottom-color: rgba(255, 207, 4, 0);
+        transition: border-bottom-color 0.7s;
+    }
+    nav div a:hover {
+        border-bottom-color: rgb(255, 207, 4);
+        border-bottom-style: solid;
+        border-top: none;
+        background: none;
+        border-width: 0.1em;
+    }
+    .voor-jou {
+        width: 100%;
+    }
+    .visiting {
+        border-top: none;
+        border-bottom-color: rgb(255, 207, 4);
+        border-bottom-style: solid;
+    }
+    .titel h1 {
+        margin: 0.3em;
+        font-size: 1.5em;
+    }
+    .titel img {
+        height: 1.3em;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .uitgelicht {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .uitgelicht article {
+        width: 50%;
+        height: 13em;
+    }
+    .uitgelicht article img {
+        display: none;
+    }
+    .uitgelicht div {
+        text-align: center;
+        width: 80%;
+        padding: 20% 0
+    }
+    .uitgelicht div h2 {
+        margin-bottom: 2em;
+    }
+    .verhalen-top {
+        text-align: center;
+    }
 }
