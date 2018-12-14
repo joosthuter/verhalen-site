@@ -61,11 +61,8 @@ h2 {
     text-transform: uppercase;
 }
 
-h1 {
+header div {
     color: white;
-}
-
-.titel {
     display: flex;
     width: 80vw;
     margin: auto;
@@ -80,11 +77,12 @@ header {
 }
 
 header nav {
-    display: flex;
     width: 80vw;
     margin: auto;
     margin-right: auto;
-    justify-content: space-between;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
 }
 
 header a {
@@ -110,18 +108,6 @@ nav img {
 nav a {
     box-sizing: border-box;
     height: 2.4em;
-}
-
-.nav-1 {
-    font-weight: bold;
-}
-
-nav div {
-    display: flex;
-}
-
-.nav-2 a {
-    background-color: #1a2b4b;
 }
 
 header a:hover {
@@ -163,7 +149,7 @@ nav form {
 
 /*uitgelicht*/
 
-.voor-jou {
+section:first-child article:first-child {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.93), rgba(255, 0, 0, 0)), url(paranoia.png);
     background-color: black;
     background-repeat: no-repeat;
@@ -173,22 +159,22 @@ nav form {
     transition: background 0.3s;
 }
 
-.voor-jou div {
+section:first-child div {
     color: white;
     width: 80vw;
     margin: auto;
     margin-right: auto;
     padding: 60px 0px 20px 0px;
+    text-align: left;
 }
 
-.voor-jou:hover {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(255, 0, 0, 0)), url(paranoia.png);
+section:first-child article:first-child:hover {
     background-repeat: no-repeat;
     background-clip: border-box;
     background-size: 105vw;
 }
 
-.populair {
+section:first-child article:last-child {
     color: white;
     background: linear-gradient(to right, rgba(0, 0, 0, 0.93), rgba(255, 0, 0, 0)), url(klumper.png);
     background-color: black;
@@ -198,22 +184,14 @@ nav form {
     transition: background 0.3s;
 }
 
-.populair div {
-    color: white;
-    width: 80vw;
-    margin: auto;
-    margin-right: auto;
-    padding: 60px 0px 20px 0px;
-}
-
-.populair:hover {
+section:first-child article:last-child:hover {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(255, 0, 0, 0)), url(klumper.png);
     background-repeat: no-repeat;
     background-clip: border-box;
     background-size: 105vw;
 }
 
-.uitgelicht {
+section:first-child {
     border-bottom: solid 0.5em;
     border-bottom-color: #30b5c7;
 }
@@ -221,7 +199,7 @@ nav form {
 
 /*alle-verhalen*/
 
-.verhalen-top {
+main div {
     text-align: center;
 }
 
@@ -263,7 +241,7 @@ nav form {
     font-size: 1.2em;
 }
 
-.verhalen {
+section:last-child {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -273,7 +251,7 @@ nav form {
     height: 40em;
 }
 
-.verhalen article {
+section:last-child article {
     background: url(klumper.png);
     background-size: 39.5em;
     background-repeat: no-repeat;
@@ -288,24 +266,44 @@ nav form {
     height: 136px;
 }
 
-.verhalen img {
+section:last-child img {
     width: 15px;
     height: 15px;
 }
 
-.verhalen article:hover {
+section:last-child article:hover {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
     background-size: 40.5em;
     transition: background-size 0.3s;
 }
 
-.verhalen div {
+section:last-child div {
+    text-align: left;
     background-color: white;
     padding: 5px 10px 1px 10px;
     border-radius: 0px 0px 10px 10px;
 }
 
 @media only screen and (max-width: 900px) {
+    section:first-child {
+        display: flex;
+        justify-content: flex-start;
+    }
+    section:first-child article {
+        width: 100%;
+        height: 13em;
+    }
+    section:first-child article img {
+        display: none;
+    }
+    section:first-child div {
+        text-align: center;
+        width: 80%;
+        padding: 20% 0
+    }
+    section:first-child div h2 {
+        margin-bottom: 2em;
+    }
     nav span {
         display: none;
     }
@@ -329,20 +327,14 @@ nav form {
     }
     header nav {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         background-color: #1a2b4b;
         width: 100%;
-    }
-    .nav-2 a {
-        background: none;
     }
     .titel {
         display: block;
         text-align: center;
         padding-bottom: 0;
-    }
-    nav div {
-        display: flex;
     }
     nav a {
         display: flex;
@@ -355,8 +347,7 @@ nav form {
         padding-left: 1em;
         border-bottom-color: rgba(255, 207, 4, 0);
         transition: border-bottom-color 0.7s;
-        box-sizing: content-box;
-        height: 2em;
+        height: 3em;
     }
     nav a:hover {
         border-bottom-color: rgb(255, 207, 4);
@@ -364,8 +355,9 @@ nav form {
         border-top: none;
         background: none;
         border-width: 0.1em;
+        height: 3.1em;
     }
-    .voor-jou {
+    section:first-child article:first-child {
         width: 100%;
     }
     .visiting {
@@ -383,28 +375,6 @@ nav form {
 }
 
 @media only screen and (max-width: 400px) {
-    .uitgelicht {
-        display: flex;
-        justify-content: flex-start;
-    }
-    .uitgelicht article {
-        width: 50%;
-        height: 13em;
-    }
-    .uitgelicht article img {
-        display: none;
-    }
-    .uitgelicht div {
-        text-align: center;
-        width: 80%;
-        padding: 20% 0
-    }
-    .uitgelicht div h2 {
-        margin-bottom: 2em;
-    }
-    .verhalen-top {
-        text-align: center;
-    }
     nav {
         position: absolute;
     }

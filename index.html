@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8">
@@ -11,28 +11,24 @@
 <body id="body">
     <header>
         <div class="titel">
-            <img src="images/logo-desktop.svg" alt="logo" id="logo">
+            <img src="images/logo-desktop.svg" alt="logo">
             <h1>99 Verhalen</h1>
         </div>
         <nav>
-            <div class="nav-1">
-                <a href="" class="visiting" id="overzicht"><span>overzicht</span> <img src="images/icon-overzicht.png" alt=""></a>
-                <a href="" id="mijnVerhalen"><span>mijn verhalen</span><img src="images/icon-mijn-verhalen.png" alt=""></a>
-                
-            </div>
-            <div class="nav-2">
-                <a href="" id="voorkeuren"><span>voorkeuren</span> <img src="images/icon-voorkeuren.png" alt=""></a>
-                <form action="">
-                <input type="text" placeholder="zoek" id="zoek"></form>
-            </div>
+
+            <a href=""><span>overzicht</span> <img src="images/icon-overzicht.png" alt=""></a>
+            <a href=""><span>mijn verhalen</span><img src="images/icon-mijn-verhalen.png" alt=""></a>
+
+
+            <a href=""><span>voorkeuren</span> <img src="images/icon-voorkeuren.png" alt=""></a>
+            <form action="">
+                <input type="text" placeholder="zoek"></form>
         </nav>
     </header>
 
     <main>
-        <section class="uitgelicht">
-
-
-            <article class="voor-jou">
+        <section>
+            <article>
                 <a href="">
                     <div>
                         <img src="images/icon-voor-jou.png" alt="icoon">
@@ -43,7 +39,7 @@
                 </a>
             </article>
 
-            <article class="populair">
+            <article>
 
                 <a href="">
                     <div>
@@ -59,68 +55,61 @@
         </section>
 
 
-        <section class="verhalen-top">
+        <div>
 
             <h2>Alle Verhalen</h2>
             <button id="filter-knop" class="filter-knop">filter</button>
             <button id="verras">verras me</button>
-        </section>
+        </div>
         <section id="filters">
             <form>
 
                 <fieldset>
                     <legend>Stemming</legend>
-                    <ul>
 
-                        <li><input type="checkbox" name="stemming" value="vrolijk" id="vrolijk">
-                            <label for="vrolijk">vrolijk</label></li>
-                        <li><input type="checkbox" name="stemming" value="gek" id="gek">
-                            <label for="gek">gek</label></li>
 
-                    </ul>
-                    <ul>
+                    <input type="checkbox" name="stemming" value="vrolijk" id="vrolijk">
+                    <label for="vrolijk">vrolijk</label>
+                    <input type="checkbox" name="stemming" value="gek" id="gek">
+                    <label for="gek">gek</label>
 
-                        <li><input type="checkbox" name="stemming" value="boos" id="boos">
-                            <label for="boos">boos</label></li>
-                        <li><input type="checkbox" name="stemming" value="verdrietig" id="verdrietig">
-                            <label for="verdrietig">verdrietig</label></li>
-                        <li><input type="checkbox" name="stemming" value="gespannen" id="gespannen">
-                            <label for="gespannen">gespannen</label></li>
 
-                    </ul>
+                    <input type="checkbox" name="stemming" value="boos" id="boos">
+                    <label for="boos">boos</label>
+                    <input type="checkbox" name="stemming" value="verdrietig" id="verdrietig">
+                    <label for="verdrietig">verdrietig</label>
+                    <input type="checkbox" name="stemming" value="gespannen" id="gespannen">
+                    <label for="gespannen">gespannen</label>
+
+
                 </fieldset>
 
                 <fieldset>
                     <legend>Stijl</legend>
-                    <ul>
+                    <input type="checkbox" name="stijl" value="kleurrijk" id="kleurrijk">
+                    <label for="kleurrijk">kleurrijk</label>
+                    <input type="checkbox" name="stijl" value="abstract" id="abstract">
+                    <label for="abstract">abstract</label>
 
-                        <li><input type="checkbox" name="stijl" value="kleurrijk" id="kleurrijk">
-                            <label for="kleurrijk">kleurrijk</label></li>
-                        <li><input type="checkbox" name="stijl" value="abstract" id="abstract">
-                            <label for="abstract">abstract</label></li>
-                    </ul>
-                    <ul>
 
-                        <li><input type="checkbox" name="stijl" value="modern" id="modern">
-                            <label for="modern">modern</label></li>
-                        <li><input type="checkbox" name="stijl" value="ouderwets" id="ouderwets">
-                            <label for="ouderwets">ouderwets</label></li>
-                    </ul>
-                    <ul>
+                    <input type="checkbox" name="stijl" value="modern" id="modern">
+                    <label for="modern">modern</label>
+                    <input type="checkbox" name="stijl" value="ouderwets" id="ouderwets">
+                    <label for="ouderwets">ouderwets</label>
 
-                        <li><input type="checkbox" name="stijl" value="simpel" id="simpel">
-                            <label for="simpel">simpel</label></li>
-                        <li><input type="checkbox" name="stijl" value="druk" id="druk">
-                            <label for="druk">druk</label></li>
+                    <input type="checkbox" name="stijl" value="simpel" id="simpel">
+                    <label for="simpel">simpel</label>
+                    <input type="checkbox" name="stijl" value="druk" id="druk">
+                    <label for="druk">druk</label>
 
-                    </ul>
+
                 </fieldset>
             </form>
 
         </section>
 
 
-        <section class="verhalen">
+        <section>
 
 
             <article>
