@@ -3,6 +3,7 @@
 * {
     font-family: arial, sans-serif;
     text-decoration: none;
+    cursor: auto;
 }
 
 body {
@@ -20,18 +21,20 @@ a {
 }
 
 button {
-    color: rgb(85, 86, 90);
-    background-color: rgb(251, 221, 15);
-    box-shadow: rgb(210, 184, 43) 0px 2px 0px 0px, rgba(0, 0, 0, 0.2) 0px 3px 2px 0px;
+    color: white;
+    background-color: #30B5C7;
+    box-shadow: #467980 0px 2px 0px 0px, #467980 0px 3px 2px 0px;
     border-radius: 4px;
     text-decoration: none;
     font-size: 1em;
     text-transform: uppercase;
     padding: 12px 20px;
+    border: none;
 }
 
 button:hover {
-    background-color: rgb(255, 242, 151);
+    background-color: #9ee6f0;
+    box-shadow: #30B5C7 0px 2px 0px 0px, #30B5C7 0px 3px 2px 0px;
 }
 
 button:active {
@@ -150,12 +153,12 @@ nav form {
 /*uitgelicht*/
 
 section:first-child article:first-child {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.93), rgba(255, 0, 0, 0)), url(paranoia.png);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.93), rgba(255, 0, 0, 0)), url(../images/paranoia.png);
     background-color: black;
     background-repeat: no-repeat;
     background-clip: border-box;
     background-size: 100vw;
-    width: 100vw;
+    width: 100%;
     transition: background 0.3s;
 }
 
@@ -164,11 +167,13 @@ section:first-child div {
     width: 80vw;
     margin: auto;
     margin-right: auto;
-    padding: 60px 0px 20px 0px;
+    padding: 3em 0px 20px 0px;
     text-align: left;
+    height: 8em;
 }
 
 section:first-child article:first-child:hover {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(255, 0, 0, 0)), url(../images/paranoia.png);
     background-repeat: no-repeat;
     background-clip: border-box;
     background-size: 105vw;
@@ -176,7 +181,7 @@ section:first-child article:first-child:hover {
 
 section:first-child article:last-child {
     color: white;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.93), rgba(255, 0, 0, 0)), url(klumper.png);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.93), rgba(255, 0, 0, 0)), url(../images/klumper.png);
     background-color: black;
     background-repeat: no-repeat;
     background-clip: border-box;
@@ -185,7 +190,7 @@ section:first-child article:last-child {
 }
 
 section:first-child article:last-child:hover {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(255, 0, 0, 0)), url(klumper.png);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(255, 0, 0, 0)), url(../images/klumper.png);
     background-repeat: no-repeat;
     background-clip: border-box;
     background-size: 105vw;
@@ -196,6 +201,19 @@ section:first-child {
     border-bottom-color: #30b5c7;
 }
 
+section:first-child button {
+    color: #55565a;
+    background-color: #fbdd0f;
+    box-shadow: #d2b82b 0px 2px 0px 0px, rgba(0, 0, 0, 0.2) 0px 3px 2px 0px;
+    position: relative;
+    left: 15em;
+    bottom: 5em;
+}
+
+section:first-child button:hover {
+    background-color: #fff297;
+}
+
 
 /*alle-verhalen*/
 
@@ -204,28 +222,35 @@ main div {
 }
 
 .filter-knop {
-    background-image: url(pijl-rechts.png);
+    background-image: url(../images/pijl-rechts.png);
     background-repeat: no-repeat;
     background-size: 12px;
     background-position: 90px;
     background-color: white;
+    border: solid 1px;
+    border-color: #55565a;
+    color: #55565a;
     box-shadow: rgb(172, 172, 172) 0px 0px 0px 0px, rgba(0, 0, 0, 0.2) 0px 0px 2px 0px;
     padding: 12px 40px 14px 20px;
 }
 
 #filter-knop:hover {
-    background-color: rgb(252, 250, 250);
+    background-color: #fdfdfd;
+    box-shadow: none;
 }
 
 .filter-actief {
-    background-image: url(pijl-onder.png);
+    background-image: url(../images/pijl-onder.png);
     background-repeat: no-repeat;
     background-size: 20px;
     background-position: 95%;
     background-color: white;
+    border: solid 1px;
+    border-color: #55565a;
+    color: #55565a;
     box-shadow: rgb(172, 172, 172) 0px 0px 0px 0px, rgba(0, 0, 0, 0.2) 0px 0px 0px 0px;
     width: 100vw;
-    margin-left: 0;
+    margin: 0;
 }
 
 #filters form {
@@ -251,37 +276,62 @@ section:last-child {
     height: 40em;
 }
 
+
+/* articles */
+
 section:last-child article {
-    background: url(klumper.png);
-    background-size: 39.5em;
-    background-repeat: no-repeat;
-    background-clip: inset(10px 10px 10px 10px);
-    width: 400px;
-    margin: 20px 6px;
-    border-radius: 10px;
-    padding-top: 250px;
+    width: 20em;
+    height: 27em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    /*schaduw afkomstig van https://www.w3schools.com/css/css3_shadows.asp geraadpleegd op 2/12/2018*/
-    transition: box-shadow 0.3s;
-    height: 136px;
+    border-radius: 1em;
+    margin: 1em;
 }
 
 section:last-child img {
-    width: 15px;
-    height: 15px;
+    width: 20em;
+    border-radius: 1em 1em 0 0;
 }
 
 section:last-child article:hover {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-    background-size: 40.5em;
-    transition: background-size 0.3s;
 }
 
 section:last-child div {
+    padding: 0 1em 1em 1em;
+    height: 9em;
     text-align: left;
-    background-color: white;
-    padding: 5px 10px 1px 10px;
-    border-radius: 0px 0px 10px 10px;
+    margin: 0;
+}
+
+section:last-child div h3 {
+    height: 4em;
+}
+
+section:last-child article button {
+    width: 100%;
+}
+
+@media only screen and (min-width: 1190px) {
+    section:last-child article {
+        width: 30%;
+        height: 25em;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 1em;
+        margin: 1em;
+    }
+    section:last-child img {
+        width: 100%;
+        height: 20em;
+        border-radius: 1em 1em 0 0;
+        z-index: 0;
+    }
+    section:last-child article div {
+        padding-top: 1em;
+        background-color: white;
+        z-index: 1;
+        position: relative;
+        bottom: 7em;
+    }
 }
 
 @media only screen and (max-width: 900px) {
@@ -299,10 +349,13 @@ section:last-child div {
     section:first-child div {
         text-align: center;
         width: 80%;
-        padding: 20% 0
+        padding: 2em 0;
     }
     section:first-child div h2 {
         margin-bottom: 2em;
+    }
+    section:first-child button {
+        display: none;
     }
     nav span {
         display: none;
@@ -322,6 +375,9 @@ section:last-child div {
     nav input::placeholder {
         color: transparent;
     }
+    nav form {
+        margin: 0 5vw;
+    }
     header {
         height: 7em;
     }
@@ -332,9 +388,8 @@ section:last-child div {
         width: 100%;
     }
     .titel {
-        display: block;
+        flex-direction: column;
         text-align: center;
-        padding-bottom: 0;
     }
     nav a {
         display: flex;
@@ -370,11 +425,21 @@ section:last-child div {
         font-size: 1.5em;
     }
     .titel img {
-        height: 1.3em;
+        width: 8em;
+        margin: auto;
     }
 }
 
 @media only screen and (max-width: 400px) {
+    section:first-child article {
+        height: 9em;
+    }
+    section:first-child h3 {
+        display: none;
+    }
+    section:first-child p {
+        display: none;
+    }
     nav {
         position: absolute;
     }
@@ -411,5 +476,25 @@ section:last-child div {
     }
     nav input:hover::placeholder {
         color: transparent;
+    }
+    section:last-child article {
+        width: 20em;
+        height: 27em;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 1em;
+        margin: 1em;
+    }
+    section:last-child img {
+        width: 20em;
+        border-radius: 1em 1em 0 0;
+    }
+    section:last-child article:hover {
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    }
+    section:last-child div {
+        padding: 0 1em 1em 1em;
+        height: 9em;
+        text-align: left;
+        margin: 0;
     }
 }
