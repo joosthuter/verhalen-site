@@ -16,12 +16,12 @@
         </div>
         <nav>
 
-            <a href=""><span>overzicht</span> <img src="images/icon-overzicht.png" alt=""></a>
+            <a href="" class="visiting"><span>overzicht</span> <img src="images/icon-overzicht.png" alt=""></a>
             <a href=""><span>mijn verhalen</span><img src="images/icon-mijn-verhalen.png" alt=""></a>
 
 
-            <a href=""><span>voorkeuren</span> <img src="images/icon-voorkeuren.png" alt=""></a>
-            <form action="">
+            <a href="login/login.html"><span>voorkeuren</span> <img src="images/icon-voorkeuren.png" alt=""></a>
+            <form>
                 <input type="text" placeholder="zoek"></form>
         </nav>
     </header>
@@ -35,9 +35,9 @@
                         <h2>Voor jou</h2>
                         <p><span>Molovich</span><span> 7 april</span></p>
                         <h3>#57 Paranoia</h3>
-                        <button>lees dit verhaal</button>
+                        <button class="buttonGeel">lees dit verhaal</button>
                     </div>
-                    
+
                 </a>
             </article>
 
@@ -49,7 +49,7 @@
                         <h2>Populair</h2>
                         <p><span>Molovich</span><span> 7 april</span></p>
                         <h3>#88 Klumperbeven</h3>
-                        <button>lees dit verhaal</button>
+                        <button class="buttonGeel">lees dit verhaal</button>
                     </div>
                 </a>
             </article>
@@ -72,42 +72,45 @@
                 <fieldset>
                     <legend>Stemming</legend>
 
+                    <ul>
 
-                    <input type="checkbox" name="stemming" value="vrolijk" id="vrolijk">
-                    <label for="vrolijk">vrolijk</label>
-                    <input type="checkbox" name="stemming" value="gek" id="gek">
-                    <label for="gek">gek</label>
-
-
-                    <input type="checkbox" name="stemming" value="boos" id="boos">
-                    <label for="boos">boos</label>
-                    <input type="checkbox" name="stemming" value="verdrietig" id="verdrietig">
-                    <label for="verdrietig">verdrietig</label>
-                    <input type="checkbox" name="stemming" value="gespannen" id="gespannen">
-                    <label for="gespannen">gespannen</label>
+                        <li><input type="checkbox" name="stemming" value="vrolijk" id="vrolijk">
+                            <label for="vrolijk">vrolijk</label></li>
+                        <li><input type="checkbox" name="stemming" value="gek" id="gek">
+                            <label for="gek">gek</label></li>
 
 
+                        <li><input type="checkbox" name="stemming" value="boos" id="boos">
+                            <label for="boos">boos</label></li>
+                        <li><input type="checkbox" name="stemming" value="verdrietig" id="verdrietig">
+                            <label for="verdrietig">verdrietig</label></li>
+                        <li><input type="checkbox" name="stemming" value="gespannen" id="gespannen">
+                            <label for="gespannen">gespannen</label></li>
+
+                    </ul>
                 </fieldset>
 
                 <fieldset>
                     <legend>Stijl</legend>
-                    <input type="checkbox" name="stijl" value="kleurrijk" id="kleurrijk">
-                    <label for="kleurrijk">kleurrijk</label>
-                    <input type="checkbox" name="stijl" value="abstract" id="abstract">
-                    <label for="abstract">abstract</label>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="stijl" value="kleurrijk" id="kleurrijk">
+                            <label for="kleurrijk">kleurrijk</label></li>
+                        <li> <input type="checkbox" name="stijl" value="abstract" id="abstract">
+                            <label for="abstract">abstract</label></li>
 
 
-                    <input type="checkbox" name="stijl" value="modern" id="modern">
-                    <label for="modern">modern</label>
-                    <input type="checkbox" name="stijl" value="ouderwets" id="ouderwets">
-                    <label for="ouderwets">ouderwets</label>
+                        <li><input type="checkbox" name="stijl" value="modern" id="modern">
+                            <label for="modern">modern</label></li>
+                        <li> <input type="checkbox" name="stijl" value="ouderwets" id="ouderwets">
+                            <label for="ouderwets">ouderwets</label></li>
 
-                    <input type="checkbox" name="stijl" value="simpel" id="simpel">
-                    <label for="simpel">simpel</label>
-                    <input type="checkbox" name="stijl" value="druk" id="druk">
-                    <label for="druk">druk</label>
+                        <li><input type="checkbox" name="stijl" value="simpel" id="simpel">
+                            <label for="simpel">simpel</label></li>
+                        <li> <input type="checkbox" name="stijl" value="druk" id="druk">
+                            <label for="druk">druk</label></li>
 
-
+                    </ul>
                 </fieldset>
             </form>
 
@@ -118,15 +121,17 @@
             <article>
 
                 <img src="images/haiku.png" alt="">
-
+                <img src="images/icon-mijn-verhalen.png" class="verhaalImg" alt="">
                 <div>
                     <h3>#1 Haiku</h3>
-                    <button>Lees dit verhaal</button>
+                    <button><a href="verhalen/haiku.html">Lees dit verhaal</a></button>
                 </div>
             </article>
 
             <article>
                 <img src="images/haiku.png" alt="">
+                <img src="images/icon-mijn-verhalen.png" class="verhaalImg" alt="">
+
                 <div>
                     <h3>#2 De presentator die ten onrechte denk aansluiting te hebben gevonden bij ‘de kids’ </h3>
                     <button>Lees dit verhaal</button>
@@ -134,57 +139,37 @@
             </article>
 
             <article>
+
                 <img src="images/haiku.png" alt="">
+                <img src="images/icon-mijn-verhalen.png" class="verhaalImg" alt="">
                 <div>
                     <h3>#1 Haiku</h3>
-                    <button>Lees dit verhaal</button>
+                    <button><a href="verhalen/haiku.html">Lees dit verhaal</a></button>
                 </div>
             </article>
-
             <article>
+
                 <img src="images/haiku.png" alt="">
+                <img src="images/icon-mijn-verhalen.png" class="verhaalImg" alt="">
                 <div>
                     <h3>#1 Haiku</h3>
-                    <button>Lees dit verhaal</button>
+                    <button><a href="verhalen/haiku.html">Lees dit verhaal</a></button>
                 </div>
             </article>
-
             <article>
+
                 <img src="images/haiku.png" alt="">
+                <img src="images/icon-mijn-verhalen.png" class="verhaalImg" alt="">
                 <div>
                     <h3>#1 Haiku</h3>
-                    <button>Lees dit verhaal</button>
-                </div>
-            </article>
-
-            <article>
-                <img src="images/haiku.png" alt="">
-                <div>
-                    <h3>#1 Haiku</h3>
-                    <button>Lees dit verhaal</button>
-                </div>
-            </article>
-
-            <article>
-                <img src="images/haiku.png" alt="">
-                <div>
-                    <h3>#1 Haiku</h3>
-                    <button>Lees dit verhaal</button>
-                </div>
-            </article>
-
-            <article>
-                <img src="images/haiku.png" alt="">
-                <div>
-                    <h3>#1 Haiku</h3>
-                    <button>Lees dit verhaal</button>
+                    <button><a href="verhalen/haiku.html">Lees dit verhaal</a></button>
                 </div>
             </article>
 
         </section>
     </main>
-
     <script src="script/script.js"></script>
+
 </body>
 
 </html>

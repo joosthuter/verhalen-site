@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial scale=1">
+    <link rel="stylesheet" href="../style/styleyeet.css">
+</head>
+
+<body class="loginBody">
+    <header>
+        <div class="titel">
+            <img src="../images/logo-desktop.svg" alt="logo" id="logo">
+            <h1>99 Verhalen</h1>
+        </div>
+        <nav>
+
+            <a href="../index.html"><span>overzicht</span> <img src="../images/icon-overzicht.png" alt=""></a>
+            <a href=""><span>mijn verhalen</span><img src="../images/icon-mijn-verhalen.png" alt=""></a>
+
+
+            <a href=""><span>voorkeuren</span> <img src="../images/icon-voorkeuren.png" alt=""></a>
+            <form>
+                <input type="text" placeholder="zoek"></form>
+        </nav>
+    </header>
+    <main>
+        <div class="loginHead">
+            <h1>Account maken</h1>
+        </div>
+        <div class="loginForm">
+            <img src="../images/paris-landmarks.svg" alt="">
+            <form action="">
+                <fieldset>
+                    <label for="">Voornaam</label>
+                    <input type="text" class="loginInput" required pattern="[A-Z][a-z]+">
+                    <label for="">Achternaam</label>
+                    <input type="text" class="loginInput" required pattern="[A-Z][a-z]+">
+                </fieldset>
+                <fieldset>
+                    <label for="">Email</label>
+
+                    <input type="text" class="loginInput" required pattern="[a-zA-Z0-9]+[@][a-zA-Z0-9]+[.][a-zA-Z0-9]+">
+                    <label for="">Wachtwoord</label>
+                    <p>Uw wachtwoord moet minimaal 1 hoofdletter en 1 cijfer bevatten</p>
+                    <!-- required pattern voor wachtwoord is afkomsig van http://html5pattern.com/Passwords -->
+                    <input type="password" class="loginInput" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
+                </fieldset>
+                <input type="submit" class="buttonGeel2">
+            </form>
+        </div>
+        <div class="loginBottom">
+            <p>Heeft u al een account? <a href="login.html" class="smallLink">Log in</a></p>
+        </div>
+    </main>
+
+    <script src="../script/script.js"></script>
+</body>
+
+</html>
