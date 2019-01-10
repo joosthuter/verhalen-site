@@ -85,7 +85,7 @@ function biemBiem() {
 
         yeet = 3;
         console.log(yeet);
-        blox.style.marginTop = "-100em";
+        blox.style.marginTop = "-120em";
         huh.innerHTML = "hmm";
 
 

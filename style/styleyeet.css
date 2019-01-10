@@ -790,7 +790,7 @@
                     nav input:focus {
                         color: white;
                         z-index: 1;
-                        width: 79%;
+                        width: 78%;
                         padding: 0.73em 1em 0.73em 3em;
                         margin: 0;
                         position: absolute;

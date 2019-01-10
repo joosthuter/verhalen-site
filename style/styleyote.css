@@ -19,199 +19,200 @@
      }
  }
  
- .verhaal button {
-     animation-name: knopacity;
-     animation-duration: 5s;
-     font-size: 1.5em;
-     padding: 0.5em;
-     width: 6em;
-     position: fixed;
-     bottom: 4em;
-     left: 50vw;
-     right: 50vw;
-     margin-left: -3em;
-     color: rgba(255, 255, 255, 0.5);
-     background-color: rgba(43, 43, 43, 0.1);
-     border: none;
-     transition: background-color 1s;
-     outline: 0;
-     z-index: 105;
-     border-radius: 0;
-     box-shadow: none;
-     text-transform: none;
+ @media only screen and (min-width: 400px) {
+     .verhaal button {
+         animation-name: knopacity;
+         animation-duration: 5s;
+         font-size: 1.5em;
+         padding: 0.5em;
+         width: 6em;
+         position: fixed;
+         bottom: 4em;
+         left: 50vw;
+         right: 50vw;
+         margin-left: -3em;
+         color: rgba(255, 255, 255, 0.5);
+         background-color: rgba(43, 43, 43, 0.1);
+         border: none;
+         transition: background-color 1s;
+         outline: 0;
+         z-index: 105;
+         border-radius: 0;
+         box-shadow: none;
+         text-transform: none;
+     }
+     .verhaal button:hover {
+         color: white;
+         background-color: rgba(42, 42, 42, 0.8);
+     }
+     .verhaal button:active {
+         background-color: rgba(201, 199, 199, 0.95);
+         transition: background-color 0.5s;
+     }
+     .verhaal a {
+         height: 5em;
+         width: 5em;
+         border-radius: 3em;
+         background-color: rgba(48, 181, 199, 0.28);
+         position: absolute;
+         bottom: 2em;
+         right: 6vw;
+         z-index: 200;
+     }
+     .verhaal a:hover {
+         background-color: #30b5c7;
+     }
+     .verhaal a img {
+         height 3em;
+         width: 3em;
+         position: relative;
+         top: 1em;
+         left: 1em;
+     }
+     .one {
+         position: absolute;
+         top: 0;
+         background-color: black;
+         width: 100vw;
+         height: 53.5em;
+         z-index: 100;
+         transition: height 1s;
+     }
+     .oneBlind {
+         height: 0;
+     }
+     .two {
+         width: 100vw;
+         margin-top: 0;
+         display: flex;
+         flex-wrap: wrap;
+         position: absolute;
+         top: 0;
+         opacity: 100;
+         transition: margin-top 2s;
+     }
+     .twoStart {
+         position: absolute;
+         top: 0;
+     }
+     .twoBlind {
+         visibility: hidden;
+     }
+     .two div {
+         box-sizing: border-box;
+         background-color: black;
+         border: solid;
+         border-color: white;
+         border-width: 0.1em;
+         width: 11.111%;
+         height: 11.111vw;
+         z-index: 99;
+         transition: opacity 0.7s;
+     }
+     .two div:hover {
+         opacity: 0;
+         border-width: 0;
+     }
+     .two div:visited {
+         background-color: red;
+     }
+     .backgroundBlind {
+         display: none;
+     }
+     .background {
+         position: absolute;
+         top: 0;
+         display: flex;
+         align-content: flex-start;
+         flex-wrap: wrap;
+         width: 100vw;
+         background-color: white;
+         z-index: 1;
+     }
+     .background img {
+         margin: 0;
+         width: 11.111vw;
+         height: 11.111vw;
+     }
+     .backgroundYeet {
+         position: absolute;
+         top: 0;
+         display: flex;
+         align-content: flex-start;
+         flex-wrap: wrap;
+         width: 100vw;
+         background-color: white;
+         z-index: 1;
+     }
+     .backgroundYeet img {
+         transition: margin 1s;
+         margin-bottom: 5em;
+         width: 11.111vw;
+         height: 11.111vw;
+     }
+     .backgroundLast {
+         transition: margin 1s;
+         position: absolute;
+         top: 0;
+         display: flex;
+         align-content: flex-start;
+         flex-wrap: wrap;
+         width: 80vw;
+         margin: 5vw 0 0 10vw;
+         font-size-adjust: center;
+         background-color: white;
+         z-index: 1;
+     }
+     .backgroundLast img {
+         transition: height 1s;
+         margin-bottom: 10vw;
+         width: 10vw;
+         height: 10vw;
+     }
+     .textOne {
+         display: none;
+         flex-wrap: wrap;
+         width: 80vw;
+         margin: auto;
+         margin-top: 5vw;
+         transition-property: all;
+         transition-duration: 1s;
+     }
+     .textOne p {
+         letter-spacing: -1.2vw;
+         word-break: break-all;
+         font-size: 10vw;
+         font-family: arial;
+         text-transform: uppercase;
+         margin: auto;
+         text-align: center;
+         transition-property: all;
+         transition-duration: 1s;
+     }
  }
  
- .verhaal button:hover {
-     color: white;
-     background-color: rgba(42, 42, 42, 0.8);
- }
- 
- .verhaal button:active {
-     background-color: rgba(201, 199, 199, 0.95);
-     transition: background-color 0.5s;
- }
- 
- .verhaal a {
-     height: 5em;
-     width: 5em;
-     border-radius: 3em;
-     background-color: rgba(48, 181, 199, 0.28);
-     position: absolute;
-     bottom: 2em;
-     right: 6vw;
-     z-index: 200;
- }
- 
- .verhaal a:hover {
-     background-color: #30b5c7;
- }
- 
- .verhaal a img {
-     height 3em;
-     width: 3em;
-     position: relative;
-     top: 1em;
-     left: 1em;
- }
- 
- .one {
-     position: absolute;
-     top: 0;
-     background-color: black;
-     width: 100vw;
-     height: 53.5em;
-     z-index: 100;
-     transition: height 1s;
- }
- 
- .oneBlind {
-     height: 0;
- }
- 
- .two {
-     width: 100vw;
-     margin-top: 0;
-     display: flex;
-     flex-wrap: wrap;
-     position: absolute;
-     top: 0;
-     opacity: 100;
-     transition: margin-top 2s;
- }
- 
- .twoStart {
-     position: absolute;
-     top: 0;
- }
- 
- .twoBlind {
-     visibility: hidden;
- }
- 
- .two div {
-     box-sizing: border-box;
-     background-color: black;
-     border: solid;
-     border-color: white;
-     border-width: 0.1em;
-     width: 11.111%;
-     height: 11.111vw;
-     z-index: 99;
-     transition: opacity 0.7s;
- }
- 
- .two div:hover {
-     opacity: 0;
-     border-width: 0;
- }
- 
- .two div:visited {
-     background-color: red;
- }
- 
- .backgroundBlind {
-     display: none;
- }
- 
- .background {
-     position: absolute;
-     top: 0;
-     display: flex;
-     align-content: flex-start;
-     flex-wrap: wrap;
-     width: 100vw;
-     background-color: white;
-     z-index: 1;
- }
- 
- .background img {
-     margin: 0;
-     width: 11.111vw;
-     height: 11.111vw;
- }
- 
- .backgroundYeet {
-     position: absolute;
-     top: 0;
-     display: flex;
-     align-content: flex-start;
-     flex-wrap: wrap;
-     width: 100vw;
-     background-color: white;
-     z-index: 1;
- }
- 
- .backgroundYeet img {
-     transition: margin 1s;
-     margin-bottom: 5em;
-     width: 11.111vw;
-     height: 11.111vw;
- }
- 
- .backgroundLast {
-     transition: margin 1s;
-     position: absolute;
-     top: 0;
-     display: flex;
-     align-content: flex-start;
-     flex-wrap: wrap;
-     width: 80vw;
-     margin: 5vw 0 0 10vw;
-     font-size-adjust: center;
-     background-color: white;
-     z-index: 1;
- }
- 
- .backgroundLast img {
-     transition: height 1s;
-     margin-bottom: 10vw;
-     width: 10vw;
-     height: 10vw;
- }
- 
- .textOne {
-     display: none;
-     flex-wrap: wrap;
-     width: 80vw;
-     margin: auto;
-     margin-top: 5vw;
-     transition-property: all;
-     transition-duration: 1s;
- }
- 
- .textOne p {
-     letter-spacing: -1.2vw;
-     word-break: break-all;
-     font-size: 10vw;
-     font-family: arial;
-     text-transform: uppercase;
-     margin: auto;
-     text-align: center;
-     transition-property: all;
-     transition-duration: 1s;
- }
- 
- @media only screen and (max-width: 400px) {
+ @media only screen and (min-width: 0em) {
+     .verhaal button {
+         animation-name: knopacity;
+         animation-duration: 5s;
+         font-size: 3em;
+         padding: 0.5em;
+         width: 6em;
+         position: fixed;
+         bottom: 4em;
+         left: 50vw;
+         right: 50vw;
+         margin-left: -3em;
+         color: rgba(255, 255, 255, 0.5);
+         background-color: rgba(43, 43, 43, 0.1);
+         border: none;
+         transition: background-color 1s;
+         outline: 0;
+         z-index: 105;
+         border-radius: 0;
+         box-shadow: none;
+         text-transform: none;
+     }
      .one {
          height: 100%;
      }
