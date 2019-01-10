@@ -606,7 +606,7 @@
                     background-repeat: no-repeat;
                     background-size: 100%;
                     width: 100vw;
-                    height: 19em;
+                    height: 17em;
                     margin-top: 8em;
                     border-bottom: solid 0.5em;
                     border-bottom-color: #30b5c7;
@@ -956,5 +956,11 @@
                     }
                     mijnFull article {
                         margin: auto;
+                    }
+                    .mijnFull main {
+                        padding-left: 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
                     }
                 }

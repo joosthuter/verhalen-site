@@ -22,6 +22,7 @@ var verhaalIcon = document.getElementById("verhaalIcon");
 var verhaalLink = document.getElementById("verhaalLink");
 var popUp = document.getElementById("popUp");
 var stinkert = document.getElementById("stink");
+var bodyHaiku = document.getElementById("bodyHaiku");
 
 
 
@@ -86,6 +87,7 @@ function biemBiem() {
         yeet = 3;
         console.log(yeet);
         blox.style.marginTop = "-120em";
+
         huh.innerHTML = "hmm";
 
 
@@ -95,6 +97,7 @@ function biemBiem() {
         console.log(yeet);
         bloxLetters.classList.remove("background");
         bloxLetters.classList.add("backgroundYeet");
+        bodyHaiku.style.backgroundColor = "white";
         huh.innerHTML = "gek zeg";
     } else if (yeet == 4) {
 
