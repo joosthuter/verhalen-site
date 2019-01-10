@@ -274,12 +274,20 @@
                     background-color: #f5f5f5;
                     display: flex;
                     justify-content: center;
+                    padding-top: 1em;
+                    padding-bottom: 3em;
                 }
                 
                 #filters fieldset {
                     border: none;
                     margin: 0.5em 5vw;
                     font-size: 1.2em;
+                }
+                
+                form button {
+                    height: 3em;
+                    position: absolute;
+                    top: 49em;
                 }
                 
                 section:last-child {
@@ -299,14 +307,12 @@
                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                     border-radius: 1em;
                     margin: 1em;
-                    border-top: solid;
-                    border-top-color: #30B5C7;
-                    border-top-width: 1em;
                     z-index: 2;
                 }
                 
                 section:last-child img:first-of-type {
                     width: 20em;
+                    border-radius: 1em 1em 0 0;
                 }
                 
                 .verhaalImg {
@@ -336,6 +342,45 @@
                 
                 section:last-child article button {
                     width: 100%;
+                }
+                
+                @keyframes popup {
+                    0% {
+                        bottom: -3em;
+                    }
+                    20% {
+                        bottom: 0em;
+                    }
+                    80% {
+                        bottom: 0em;
+                    }
+                    100% {
+                        bottom: -3em;
+                    }
+                }
+                
+                .popdown {
+                    display: none;
+                }
+                
+                .popup {
+                    box-shadow: 0 -3px 4px 0 rgba(0, 0, 0, 0.2);
+                    text-align: center;
+                    color: white;
+                    background-color: #30B5C7;
+                    width: 100vw;
+                    position: fixed;
+                    bottom: 0;
+                    z-index: 3;
+                    padding: 0;
+                    margin: 0;
+                }
+                
+                footer div img {
+                    position: absolute;
+                    bottom: 0;
+                    height: 3em;
+                    right: 2em;
                 }
                 /*LOGIN --- LOGIN --- LOGIN ---- LOGIN --- LOGIN*/
                 
@@ -456,186 +501,171 @@
                     color: #109fb3;
                     text-decoration: underline;
                 }
-                /* VERHAAL VERHAAL VERHAAL VERHAAL VERHAAL VERHAAL*/
+                /* MIJN VERHALEN*/
                 
-                @keyframes maakRuimte {
-                    from {
-                        margin-right: 0;
-                    }
-                    to {
-                        margin-right: 10em;
-                    }
+                .mijnVerhaal {
+                    background-color: #f7f7f7;
+                    background-image: url(../images/icon-verhaal-grey.png);
+                    background-repeat: no-repeat;
+                    background-position: top 18em left 50%;
+                    background-size: 6em;
                 }
                 
-                .verhaal button {
-                    font-size: 1.5em;
-                    padding: 0.5em;
-                    width: 6em;
-                    position: fixed;
-                    bottom: 4em;
-                    left: 50vw;
-                    right: 50vw;
-                    margin-left: -3em;
-                    color: rgba(255, 255, 255, 0.5);
-                    background-color: rgba(43, 43, 43, 0.1);
-                    border: none;
-                    transition: background-color 1s;
-                    outline: 0;
-                    z-index: 105;
-                    border-radius: 0;
-                    box-shadow: none;
+                .mijnVerhaal main h2 {
+                    text-align: center;
+                    color: #ACACAC;
+                    font-family: helvetica;
                     text-transform: none;
+                    width: 20em;
+                    margin: auto;
+                    margin-top: 9em;
                 }
                 
-                .verhaal button:hover {
+                .mijnVerhaal p {
+                    color: #ACACAC;
+                    text-align: center;
+                    width: 20em;
+                    margin: auto;
+                    margin-top: 12em;
+                }
+                
+                .mijnVerhaal p img {
+                    height: 1em;
+                }
+                
+                .mijnVerhaal section {
+                    display: none;
+                }
+                
+                .mijnFull main {
+                    padding-left: 10vw;
+                }
+                
+                .mijnFull main h2 {
+                    text-align: center;
+                    color: #ACACAC;
+                    font-family: helvetica;
+                    text-transform: none;
+                    width: 20em;
+                    margin: auto;
+                    margin-top: 7em;
+                }
+                
+                .mijnFull article {
+                    width: 20em;
+                    height: 27em;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    border-radius: 1em;
+                    margin-top: 1em;
+                    border-top: solid;
+                    border-top-color: #30B5C7;
+                    border-top-width: 1em;
+                }
+                
+                .mijnFull main img:first-of-type {
+                    width: 20em;
+                }
+                
+                .verhaalImg {
+                    height: 2em;
+                    width: 2em;
+                    position: relative;
+                    top: -3em;
+                    left: 2em;
+                }
+                
+                .mijnFull article:hover {
+                    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+                }
+                
+                .mijnFull main div {
+                    padding: 0 1em 1em 1em;
+                    height: 9em;
+                    text-align: left;
+                    margin: 0;
+                }
+                
+                .mijnFull div h3 {
+                    height: 4em;
+                }
+                
+                .mijnFull article button {
+                    width: 100%;
+                }
+                
+                .comments {
+                    margin-top: 1em;
+                }
+                
+                .comments h2 {
+                    text-align: center;
+                }
+                
+                .comments a div {
+                    background-image: url(../images/haiku.jpg);
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    width: 100vw;
+                    height: 19em;
+                    margin-top: 8em;
+                    border-bottom: solid 0.5em;
+                    border-bottom-color: #30b5c7;
+                }
+                
+                .comments form {
+                    width: 40em;
+                    margin: auto;
+                    margin-top: 2em;
+                    margin-bottom: 2em;
+                }
+                
+                .comments textarea {
+                    resize: none;
+                    width: 100%;
+                    font-size: 1.2em;
+                    border: 2px solid #30B5C7;
+                }
+                
+                .comments input {
                     color: white;
-                    background-color: rgba(42, 42, 42, 0.8);
-                }
-                
-                .verhaal button:active {
-                    background-color: rgba(201, 199, 199, 0.95);
-                    transition: background-color 0.5s;
-                }
-                
-                .one {
-                    position: absolute;
-                    top: 0;
-                    background-color: black;
-                    width: 100vw;
-                    height: 53.5em;
-                    z-index: 100;
-                    transition: height 1s;
-                }
-                
-                .oneBlind {
-                    height: 0;
-                }
-                
-                .two {
-                    width: 100vw;
-                    margin-top: 0;
-                    display: flex;
-                    flex-wrap: wrap;
-                    position: absolute;
-                    top: 0;
-                    opacity: 100;
-                    transition: margin-top 2s;
-                }
-                
-                .twoStart {
-                    position: absolute;
-                    top: 0;
-                }
-                
-                .twoBlind {
-                    visibility: hidden;
-                }
-                
-                .two div {
-                    box-sizing: border-box;
-                    background-color: black;
-                    border: solid;
-                    border-color: white;
-                    border-width: 0.1em;
-                    width: 11.111%;
-                    height: 11.111vw;
-                    z-index: 99;
-                    transition: opacity 0.7s;
-                }
-                
-                .two div:hover {
-                    opacity: 0;
-                    border-width: 0;
-                }
-                
-                .two div:visited {
-                    background-color: red;
-                }
-                
-                .backgroundBlind {
-                    display: none;
-                }
-                
-                .background {
-                    position: absolute;
-                    top: 0;
-                    display: flex;
-                    align-content: flex-start;
-                    flex-wrap: wrap;
-                    width: 100vw;
-                    background-color: white;
-                    z-index: 1;
-                }
-                
-                .background img {
-                    margin: 0;
-                    width: 11.111vw;
-                    height: 11.111vw;
-                }
-                
-                .backgroundYeet {
-                    position: absolute;
-                    top: 0;
-                    display: flex;
-                    align-content: flex-start;
-                    flex-wrap: wrap;
-                    width: 100vw;
-                    background-color: white;
-                    z-index: 1;
-                }
-                
-                .backgroundYeet img {
-                    transition: margin 1s;
-                    margin-bottom: 5em;
-                    width: 11.111vw;
-                    height: 11.111vw;
-                }
-                
-                .backgroundLast {
-                    transition: margin 1s;
-                    position: absolute;
-                    top: 0;
-                    display: flex;
-                    align-content: flex-start;
-                    flex-wrap: wrap;
-                    width: 80vw;
-                    margin: 5vw 0 0 10vw;
-                    font-size-adjust: center;
-                    background-color: white;
-                    z-index: 1;
-                }
-                
-                .backgroundLast img {
-                    transition: height 1s;
-                    margin-bottom: 10vw;
-                    width: 10vw;
-                    height: 10vw;
-                }
-                
-                .textOne {
-                    display: none;
-                    flex-wrap: wrap;
-                    width: 80vw;
-                    margin: auto;
-                    margin-top: 5vw;
-                }
-                
-                .textOne {
-                    display: none;
-                    flex-wrap: nowrap;
-                    width: 80vw;
-                    margin: auto;
-                    margin-top: 5vw;
-                }
-                
-                .textOne p {
-                    letter-spacing: -1.2vw;
-                    word-break: break-all;
-                    font-size: 10vw;
-                    font-family: arial;
+                    background-color: #30B5C7;
+                    box-shadow: #467980 0px 2px 0px 0px, #467980 0px 3px 2px 0px;
+                    border-radius: 4px;
+                    text-decoration: none;
+                    font-size: 1em;
                     text-transform: uppercase;
-                    margin: 0;
-                    transition: flex-direction 1s;
+                    padding: 12px 20px;
+                    border: none;
+                    text-align: center;
+                    width: 10em;
+                    margin-left: 5em;
+                    margin-top: 1em;
+                }
+                
+                .comments div {
+                    background-color: #f2f2f2;
+                    width: 40em;
+                    margin: auto;
+                    margin-top: 1em;
+                }
+                
+                .urComment {
+                    border-left: 5px solid #30B5C7;
+                    box-sizing: border-box;
+                }
+                
+                .comments span {
+                    display: flex;
+                    color: #9a9a9a;
+                }
+                
+                .comments span p {
+                    margin-left: 1em;
+                }
+                
+                .textComment {
+                    padding: 0 1em 1em 1em;
+                    text-align: left;
                 }
                 
                 @media only screen and (min-width: 1190px) {
@@ -652,7 +682,6 @@
                         z-index: 0;
                     }
                     section:last-child article div {
-                        
                         z-index: 1;
                         position: relative;
                         bottom: 7em;
@@ -699,10 +728,15 @@
                         flex-direction: column;
                         text-align: center;
                     }
+                    .titel h1 {
+                        padding-right: 1em;
+                    }
                     nav span {
                         display: none;
                     }
                     nav img {
+                        padding-right: 0.5em;
+                        ;
                         display: block;
                         height: 1.8em;
                     }
@@ -714,6 +748,7 @@
                     }
                     nav a {
                         display: flex;
+                        justify-content: space-around;
                         flex-direction: column;
                         background: none;
                         margin: 0 6vw;
@@ -755,7 +790,7 @@
                     nav input:focus {
                         color: white;
                         z-index: 1;
-                        width: 90%;
+                        width: 79%;
                         padding: 0.73em 1em 0.73em 3em;
                         margin: 0;
                         position: absolute;
@@ -781,7 +816,6 @@
                     nav input:hover::placeholder {
                         color: transparent;
                     }
-                    
                     main {
                         margin-top: 0;
                     }
@@ -807,6 +841,9 @@
                         margin: auto;
                         ;
                     }
+                    form button {
+                        top: 42em;
+                    }
                     /* LOGIN */
                     .loginForm img {
                         position: absolute;
@@ -818,6 +855,29 @@
                     }
                     .loginBottom {
                         width: 90vw;
+                    }
+                    .mijnVerhaal main h2 {
+                        margin-top: 2em;
+                        width: 10em;
+                    }
+                    .mijnVerhaal {
+                        background-position: top 12em;
+                    }
+                    .mijnVerhaal p {
+                        margin-top: 12em;
+                    }
+                    .mijnFull main h2 {
+                        margin-top: 2em;
+                        width: 10em;
+                    }
+                    .comments a div {
+                        margin-top: 1em;
+                    }
+                    .comments div {
+                        width: 20em;
+                    }
+                    .comments form {
+                        width: 20em;
                     }
                 }
                 
@@ -878,7 +938,6 @@
                     }
                     section:last-child img:first-of-type {
                         width: 20em;
-                        border-radius: 1em 1em 0 0;
                     }
                     section:last-child article:hover {
                         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
@@ -889,7 +948,13 @@
                         text-align: left;
                         margin: 0;
                     }
+                    form button {
+                        top: 38em;
+                    }
                     .loginForm img {
                         display: none;
+                    }
+                    mijnFull article {
+                        margin: auto;
                     }
                 }

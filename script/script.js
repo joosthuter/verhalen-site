@@ -17,7 +17,13 @@ var yeet = 1;
 var textOne = document.getElementById("textOne");
 var textOneContent = document.getElementById("textOneContent");
 var verhaalBtn = document.querySelector("article img.verhaalImg");
-console.log("yeet");
+var titel = document.querySelector("span.titel");
+var verhaalIcon = document.getElementById("verhaalIcon");
+var verhaalLink = document.getElementById("verhaalLink");
+var popUp = document.getElementById("popUp");
+var stinkert = document.getElementById("stink");
+
+
 
 
 function showFilters() {
@@ -46,8 +52,20 @@ function bigButton() {
 }
 
 function rollGif() {
-    verhaalBtn.src = "images/check2.gif";
+    popUp.classList.remove("popdown");
+    popUp.classList.add("popup");
+    verhaalIcon.src = "images/animatie-999.gif";
+    verhaalBtn.src = "images/animatie-2000.gif";
+
+    verhaalLink.href = "verhalen/mijn-full.html"
 }
+
+function stinkAway() {
+    popUp.classList.remove("popdown");
+    popUp.classList.add("popdown");
+}
+
+
 
 function biemBiem() {
 
@@ -95,15 +113,26 @@ function biemBiem() {
         yeet = 7;
         textOneContent.style.display = "flex";
         textOneContent.style.flexDirection = "column";
+        textOneContent.style.letterSpacing = "0";
+        titel.style.fontSize = "7vw";
+        textOneContent.style.fontSize = "5vw";
+        textOneContent.style.textTransform = "none";
+    } else if (yeet == 7) {
+
+        yeet = 8;
+        textOneContent.style.fontFamily = "Times";
+
     }
 }
 
 if (huh) {
     huh.addEventListener("click", biemBiem);
 }
+
 filterBtn.addEventListener("click", showFilters);
 filterBtn.addEventListener("click", bigButton);
 verhaalBtn.addEventListener("click", rollGif);
+stinkert.addEventListener("click", stinkAway);
 
 
 
