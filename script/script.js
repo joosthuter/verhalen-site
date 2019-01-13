@@ -2,27 +2,29 @@
 /*eslint-env browser*/
 /*eslint 'no-console':0*/
 
-// De code van regel 3 tot 17 zijn gebaseerd op de code van Rico Zethof, geraadpleegd op 1/12/2018
-
 
 var filterBtn = document.getElementById("filter-knop");
 var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 var email = document.getElementById("email");
+var verras = document.getElementById("verras");
 var huh = document.getElementById('huh');
 var zwart = document.getElementById('black');
 var blox = document.getElementById('blox');
 var bloxLetters = document.getElementById('bloxLetters');
-var images = document.querySelectorAll("img");
+var images = document.querySelector("img");
 var yeet = 1;
 var textOne = document.getElementById("textOne");
 var textOneContent = document.getElementById("textOneContent");
 var verhaalBtn = document.querySelector("article img.verhaalImg");
+var error = document.getElementById("error");
+var errorMessage = document.getElementById("popUpErr");
 var titel = document.querySelector("span.titel");
 var verhaalIcon = document.getElementById("verhaalIcon");
 var verhaalLink = document.getElementById("verhaalLink");
 var popUp = document.getElementById("popUp");
-var stinkert = document.getElementById("stink");
+var stinkert = document.querySelector("footer div img.stinker");
 var bodyHaiku = document.getElementById("bodyHaiku");
+var toepassen = document.getElementById("toepassen");
 
 
 
@@ -33,10 +35,10 @@ function showFilters() {
 
 
     var x = document.getElementById("filters");
-    if (x.style.display === "block") {
+    if (x.style.display === "flex") {
         x.style.display = "none";
     } else {
-        x.style.display = "block";
+        x.style.display = "flex";
     }
 }
 
@@ -45,6 +47,7 @@ function bigButton() {
         filterBtn.classList.remove("filter-knop");
         filterBtn.classList.add("filter-actief");
         verras.style.display = "none";
+
     } else {
         filterBtn.classList.remove("filter-actief");
         filterBtn.classList.add("filter-knop");
@@ -57,8 +60,13 @@ function rollGif() {
     popUp.classList.add("popup");
     verhaalIcon.src = "images/animatie-999.gif";
     verhaalBtn.src = "images/animatie-2000.gif";
+    verhaalLink.href = "verhalen/mijn-full.html";
+}
 
-    verhaalLink.href = "verhalen/mijn-full.html"
+
+function errorYeet() {
+    errorMessage.classList.remove("popdown");
+    errorMessage.classList.add("popupErr");
 }
 
 function stinkAway() {
@@ -132,16 +140,27 @@ if (huh) {
     huh.addEventListener("click", biemBiem);
 }
 
+
+
 filterBtn.addEventListener("click", showFilters);
 filterBtn.addEventListener("click", bigButton);
 verhaalBtn.addEventListener("click", rollGif);
+error.addEventListener("click", errorYeet);
 stinkert.addEventListener("click", stinkAway);
+toepassen.addEventListener('submit', function (event) {
+    event.preventDefault();
+    return false;
+
+}, false);
 
 
 
-if (width < 950) {
-    document.getElementById("logo").src = "images/logo-mobile.svg";
-    console.log("yeet!");
+if (width < 816) {
+    document.getElementById("logo").src = "../images/logo-mobile.svg";
+    if (filterBtn) {
+        document.getElementById("logo").src = "images/logo-mobile.svg";
+    }
+
 }
 
 

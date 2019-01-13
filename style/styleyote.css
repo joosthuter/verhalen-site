@@ -2,23 +2,40 @@
      from {
          margin-right: 0;
      }
+
      to {
          margin-right: 10em;
      }
  }
- 
+
  @keyframes knopacity {
      0% {
          opacity: 0;
      }
+
      60% {
          opacity: 0;
      }
+
      100% {
          opacity: 100;
      }
  }
- 
+
+
+ body {
+     margin-left: 2px;
+ }
+
+ header {
+     height: 3em;
+ }
+
+ nav {
+     height: 3em;
+     width: 100vw;
+ }
+
  .verhaal button {
      animation-name: knopacity;
      animation-duration: 5s;
@@ -29,7 +46,7 @@
      bottom: 4em;
      left: 50vw;
      right: 50vw;
-     margin-left: -3em;
+
      color: rgba(255, 255, 255, 0.5);
      background-color: rgba(43, 43, 43, 0.1);
      border: none;
@@ -40,17 +57,17 @@
      box-shadow: none;
      text-transform: none;
  }
- 
+
  .verhaal button:hover {
      color: white;
      background-color: rgba(42, 42, 42, 0.8);
  }
- 
+
  .verhaal button:active {
      background-color: rgba(201, 199, 199, 0.95);
      transition: background-color 0.5s;
  }
- 
+
  .verhaal a {
      height: 5em;
      width: 5em;
@@ -61,11 +78,11 @@
      right: 6vw;
      z-index: 200;
  }
- 
+
  .verhaal a:hover {
      background-color: #30b5c7;
  }
- 
+
  .verhaal a img {
      height 3em;
      width: 3em;
@@ -73,11 +90,11 @@
      top: 1em;
      left: 1em;
  }
- 
+
  body {
      background-color: black;
  }
- 
+
  .one {
      position: absolute;
      top: 0;
@@ -87,11 +104,11 @@
      z-index: 100;
      transition: height 1s;
  }
- 
+
  .oneBlind {
      height: 0;
  }
- 
+
  .two {
      width: 100vw;
      margin-top: 0;
@@ -102,16 +119,16 @@
      opacity: 100;
      transition: margin-top 2s;
  }
- 
+
  .twoStart {
      position: absolute;
      top: 0;
  }
- 
+
  .twoBlind {
      visibility: hidden;
  }
- 
+
  .two div {
      box-sizing: border-box;
      background-color: black;
@@ -123,20 +140,20 @@
      z-index: 99;
      transition: opacity 0.7s;
  }
- 
+
  .two div:hover {
      opacity: 0;
      border-width: 0;
  }
- 
+
  .two div:visited {
      background-color: red;
  }
- 
+
  .backgroundBlind {
      display: none;
  }
- 
+
  .background {
      position: absolute;
      top: 0;
@@ -147,13 +164,13 @@
      background-color: black;
      z-index: 1;
  }
- 
+
  .background img {
      margin: 0;
      width: 11.111vw;
      height: 11.111vw;
  }
- 
+
  .backgroundYeet {
      position: absolute;
      top: 0;
@@ -164,14 +181,14 @@
      background-color: white;
      z-index: 1;
  }
- 
+
  .backgroundYeet img {
      transition: margin 1s;
      margin-bottom: 5em;
      width: 11.111vw;
      height: 11.111vw;
  }
- 
+
  .backgroundLast {
      transition: margin 1s;
      position: absolute;
@@ -185,14 +202,14 @@
      background-color: white;
      z-index: 1;
  }
- 
+
  .backgroundLast img {
      transition: height 1s;
      margin-bottom: 10vw;
      width: 10vw;
      height: 10vw;
  }
- 
+
  .textOne {
      display: none;
      flex-wrap: wrap;
@@ -202,7 +219,7 @@
      transition-property: all;
      transition-duration: 1s;
  }
- 
+
  .textOne p {
      letter-spacing: -1.2vw;
      word-break: break-all;
@@ -214,7 +231,7 @@
      transition-property: all;
      transition-duration: 1s;
  }
- 
+
  @media only screen and (max-width: 400px) {
      .verhaal button {
          animation-name: knopacity;
@@ -237,9 +254,11 @@
          box-shadow: none;
          text-transform: none;
      }
+
      .one {
          height: 100%;
      }
+
      .two div {
          box-sizing: border-box;
          background-color: black;
@@ -250,12 +269,14 @@
          height: 16.666vw;
          transition: background-color 0.7s;
      }
+
      .background img {
          outline: 0;
          margin: 0;
          width: 16.666%;
          height: 16.666vw;
      }
+
      .verhaal a {
          height: 3em;
          width: 3em;
@@ -266,9 +287,11 @@
          right: 6vw;
          z-index: 200;
      }
+
      .verhaal a:hover {
          background-color: #30b5c7;
      }
+
      .verhaal a img {
          height 1.5em;
          width: 1.5em;
