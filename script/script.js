@@ -25,22 +25,23 @@ var popUp = document.getElementById("popUp");
 var stinkert = document.querySelector("footer div img.stinker");
 var bodyHaiku = document.getElementById("bodyHaiku");
 var toepassen = document.getElementById("toepassen");
+var filters = document.getElementById("filters");
 
 
 
 
-function showFilters() {
+function showFilter() {
+    if (filters.style.display === "flex") {
 
-    // deze functie is gebaseerd op de code van Rico Zethof, geraadpleegd op 1/12/2018
-
-
-    var x = document.getElementById("filters");
-    if (x.style.display === "flex") {
-        x.style.display = "none";
+        filters.classList.add("hide");
+        filters.style.display = "none";
     } else {
-        x.style.display = "flex";
+        filters.classList.remove("hide");
+
+        filters.style.display = "flex";
     }
 }
+
 
 function bigButton() {
     if (filterBtn.classList.contains("filter-knop")) {
@@ -87,7 +88,7 @@ function biemBiem() {
         blox.classList.add("two");
         bloxLetters.classList.remove("backgroundBlind");
         bloxLetters.classList.add("background");
-        huh.innerHTML = "wat?";
+
         console.log(yeet);
 
     } else if (yeet == 2) {
@@ -96,7 +97,7 @@ function biemBiem() {
         console.log(yeet);
         blox.style.marginTop = "-120em";
 
-        huh.innerHTML = "hmm";
+
 
 
     } else if (yeet == 3) {
@@ -106,13 +107,13 @@ function biemBiem() {
         bloxLetters.classList.remove("background");
         bloxLetters.classList.add("backgroundYeet");
         bodyHaiku.style.backgroundColor = "white";
-        huh.innerHTML = "gek zeg";
+
     } else if (yeet == 4) {
 
         yeet = 5;
         bloxLetters.classList.remove("backgroundYeet");
         bloxLetters.classList.add("backgroundLast");
-        huh.innerHTML = "ehhm..?";
+
     } else if (yeet == 5) {
 
         yeet = 6;
@@ -131,8 +132,10 @@ function biemBiem() {
     } else if (yeet == 7) {
 
         yeet = 8;
-        textOneContent.style.fontFamily = "Times";
-
+        console.log(yeet);
+        textOneContent.style.fontWeight = "100";
+        textOneContent.style.fontFamily = "Georgia";
+        huh.style.display = "none";
     }
 }
 
@@ -142,7 +145,7 @@ if (huh) {
 
 
 
-filterBtn.addEventListener("click", showFilters);
+filterBtn.addEventListener("click", showFilter);
 filterBtn.addEventListener("click", bigButton);
 verhaalBtn.addEventListener("click", rollGif);
 error.addEventListener("click", errorYeet);
