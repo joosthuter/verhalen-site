@@ -488,6 +488,7 @@ section:last-child form {
 
 .verras:hover {
     background-color: #fcfcfc;
+    box-shadow: #9b9b9b 0px 2px 0px 0px, #9b9b9b 0px 3px 2px 0px;
 }
 
 section:last-child {
@@ -920,7 +921,7 @@ fieldset p {
     text-align: left;
 }
 
-@media only screen and (min-width: 1190px) {
+@media only screen and (min-width: 75em) {
     section:last-child article {
         width: 30%;
         height: 25em;
@@ -956,8 +957,8 @@ fieldset p {
         position: sticky;
         top: -5em;
     }
-    
-    
+
+
 
     section:first-child {
         display: flex;
@@ -1005,7 +1006,7 @@ fieldset p {
         background-color: #1a2b4b;
         width: 100%;
     }
-    
+
     header div h1 {
         margin: 0.3em;
         font-size: 1.5em;
@@ -1155,7 +1156,7 @@ fieldset p {
         border-bottom-color: rgb(255, 244, 199);
     }
 
-    
+
 
     form button {
         top: 42em;

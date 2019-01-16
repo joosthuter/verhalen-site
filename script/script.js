@@ -5,13 +5,11 @@
 
 var filterBtn = document.getElementById("filter-knop");
 var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-var email = document.getElementById("email");
 var verras = document.getElementById("verras");
 var huh = document.getElementById('huh');
 var zwart = document.getElementById('black');
 var blox = document.getElementById('blox');
 var bloxLetters = document.getElementById('bloxLetters');
-var images = document.querySelector("img");
 var yeet = 1;
 var textOne = document.getElementById("textOne");
 var textOneContent = document.getElementById("textOneContent");
@@ -81,8 +79,7 @@ function biemBiem() {
 
     if (yeet == 1) {
         yeet = 2;
-        /*zwart.classList.remove("one");
-        zwart.classList.add("oneBlind");*/
+
         zwart.style.height = "0";
         blox.classList.remove("twoBlind");
         blox.classList.add("two");
