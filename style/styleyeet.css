@@ -83,7 +83,7 @@ header div h1 {
 }
 
 header {
-    z-index: 10;
+    z-index: 20;
     padding-top: 15px;
     background-color: #07193c;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -401,13 +401,17 @@ section:last-child div:first-child {
     text-align: center;
     width: 100vw;
     margin-bottom: 1.5em;
+    height: 12em;
+    transition: height 1s;
 }
 
 section:last-child div:first-child h2 {
     text-align: center;
     width: 100vw;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin: 0;
+    background-color: white;
 }
 
 .filter-knop {
@@ -451,22 +455,37 @@ section:last-child div:first-child h2 {
 section:last-child form {
     background-color: #f5f5f5;
     justify-content: space-around;
+    display: flex;
     flex-wrap: wrap;
     padding-top: 1em;
     padding-bottom: 3em;
     max-width: 50em;
     margin: auto;
     margin-bottom: 1em;
+    z-index: -1;
 
+    position: relative;
+    top: -40em;
+    transition-property: top;
+    transition-duration: 1s;
 }
 
-.hide {
-    display: none;
+section:last-child form button:hover {
+    background-color: #9ee6f0;
+    box-shadow: #30B5C7 0px 2px 0px 0px, #30B5C7 0px 3px 2px 0px;
+}
+
+/*.hide {
+
+    position: relative;
+    top: -20em;
 }
 
 .show {
-    display: flex;
-}
+    position: relative;
+    top: 0em;
+
+}*/
 
 #filters fieldset {
     border: none;
@@ -694,7 +713,6 @@ footer p a {
 /*.loginForm fieldset input:invalid {
 background: url(../images/cancel.png);
 background-size: 1.3em; background-repeat: no-repeat;
-
  background-position: right 1em center; border: solid 2px;
 border-color: #f36363;
 }*/
@@ -706,8 +724,18 @@ border-color: #f36363;
     margin: auto;
     margin-top: 2em;
     border: none;
+    border-radius: 0.5em;
     font-size: 1em;
     padding: 1em;
+}
+
+.loginForm form input.buttonGeel2:hover {
+    background-color: #fff29a;
+}
+
+.loginForm form input.buttonGeel2:active {
+    background-color: #fff29a;
+    box-shadow: none;
 }
 
 .loginForm img {
@@ -1264,12 +1292,11 @@ fieldset p {
         margin: 0;
     }
 
-    #filters button {
-        margin-left: 30%;
-    }
 
     form button {
         top: 38em;
+        width: 12em;
+        margin: auto;
     }
 
     .loginForm img {

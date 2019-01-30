@@ -33,19 +33,19 @@
             <img src="../images/paris-landmarks.svg" alt="">
             <form action="">
                 <fieldset>
-                    <label for="">Voornaam</label>
-                    <input type="text" class="loginInput" required pattern="[A-Z][a-z]+">
-                    <label for="">Achternaam</label>
-                    <input type="text" class="loginInput" required pattern="[A-Z][a-z]+">
+                    <label for="voornaam">Voornaam</label>
+                    <input type="text" id="voornaam" class="loginInput" required>
+                    <label for="achternaam">Achternaam</label>
+                    <input type="text" id="achternaam" class="loginInput" required>
                 </fieldset>
                 <fieldset>
-                    <label for="">Email</label>
+                    <label for="email">Email</label>
 
-                    <input type="text" class="loginInput" required pattern="[a-zA-Z0-9]+[@][a-zA-Z0-9]+[.][a-zA-Z0-9]+">
-                    <label for="">Wachtwoord</label>
+                    <input type="text" id="email" class="loginInput" placeholder="jaap@email.com" required pattern="[a-zA-Z0-9]+[@][a-zA-Z0-9]+[.][a-zA-Z0-9]+">
+                    <label for="password">Wachtwoord</label>
                     <p>Uw wachtwoord moet minimaal 1 hoofdletter en 1 cijfer bevatten</p>
                     <!-- required pattern voor wachtwoord is afkomsig van http://html5pattern.com/Passwords -->
-                    <input type="password" class="loginInput" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
+                    <input type="password" id="password" class="loginInput" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
                 </fieldset>
                 <input type="submit" class="buttonGeel2">
             </form>

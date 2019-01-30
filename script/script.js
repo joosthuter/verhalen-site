@@ -24,22 +24,57 @@ var stinkert = document.querySelector("footer div img.stinker");
 var bodyHaiku = document.getElementById("bodyHaiku");
 var toepassen = document.getElementById("toepassen");
 var filters = document.getElementById("filters");
+var deadDiv = document.getElementById("divOfDeath");
+
+var dab = 0;
 
 
 
-
-function showFilter() {
+/*function showFilter() {
     if (filters.style.display === "flex") {
 
         filters.classList.add("hide");
         filters.style.display = "none";
     } else {
         filters.classList.remove("hide");
-
+        filters.classList.add("show");
         filters.style.display = "flex";
     }
+}*/
+
+/*function showFilter() {
+    if (dab == 1) {
+        dab = 0;
+        filters.classList.remove("show");
+        filters.classList.add("hide");
+        filters.style.display = "flex";
+    } else if (dab == 0) {
+        dab = 1;
+        filters.classList.remove("hide");
+        filters.classList.add("show");
+        filters.style.display = "flex";
+    }
+}*/
+
+function index() {
+    filters.style.zIndex = 18;
+    console.log(dab);
 }
 
+function showFilter() {
+
+    if (dab == 1) {
+        dab = 0;
+        deadDiv.style.height = "12em";
+        filters.style.top = "-40em";
+        filters.style.zIndex = -1;
+    } else if (dab === 0) {
+        dab = 1;
+        deadDiv.style.height = "45em";
+        filters.style.top = "0em";
+        window.setTimeout(index, 1000);
+    }
+}
 
 function bigButton() {
     if (filterBtn.classList.contains("filter-knop")) {
@@ -162,6 +197,3 @@ if (width < 816) {
     }
 
 }
-
-
-document.getElementById("filters").style.display = "none";
